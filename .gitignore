@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/deployment-automation
 
 # dependencies
 /node_modules
