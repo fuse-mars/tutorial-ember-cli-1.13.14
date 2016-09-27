@@ -7,8 +7,8 @@ module.exports = function(deployTarget) {
     },
     git: {
       repo: 'git@github.com:fuse-mars/tutorial-ember-cli-1.13.14.git',
-      branch: 'gh-pages',
-      worktreePath: 'deployment-automation'
+      // branch: 'gh-pages', // gh-pages is the default
+      worktreePath: '/tmp/deployment-automation'
     }
   };
 
