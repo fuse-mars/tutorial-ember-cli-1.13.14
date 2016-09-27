@@ -3,14 +3,7 @@ language: node_js
 node_js:
   - "4.5.0"
 
-sudo: required
-dist: trusty
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+sudo: false
 
 cache:
   directories:
@@ -27,10 +20,10 @@ install:
   - bower install
 
 script:
-  - npm test
+  - ember test
 
 before_deploy:
-  - ember test -s -f 'Acceptance |'
+  - ember test -f 'Acceptance |'
 deploy:
   skip_cleanup: true
   provider: script
