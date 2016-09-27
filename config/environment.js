@@ -29,7 +29,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.baseURL = '/tutorial-ember-cli-1.13.14/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
