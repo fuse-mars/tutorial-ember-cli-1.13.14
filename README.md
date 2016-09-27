@@ -1,7 +1,7 @@
 # App-test
+[![Build Status](https://travis-ci.org/fuse-mars/tutorial-ember-cli-1.13.14.svg?branch=master)](https://travis-ci.org/fuse-mars/tutorial-ember-cli-1.13.14)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Multiple little features written using ember cli v1.13.14
 
 ## Prerequisites
 
