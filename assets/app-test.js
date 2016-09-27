@@ -274,7 +274,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("app-test/app")["default"].create({"name":"app-test","version":"0.0.0+ae952ef5"});
+  require("app-test/app")["default"].create({"name":"app-test","version":"0.0.0+845adf74"});
 }
 
 /* jshint ignore:end */
