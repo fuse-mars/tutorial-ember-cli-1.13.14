@@ -41,7 +41,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Just merge the code into deployment branch, then Travis will do the rest!
 
 ## Further Reading / Useful Links
 
