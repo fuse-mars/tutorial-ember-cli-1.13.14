@@ -1,7 +1,7 @@
 ---
 language: node_js
 node_js:
-  - "0.12"
+  - "4.5.0"
 
 sudo: false
 
@@ -21,3 +21,12 @@ install:
 
 script:
   - npm test
+
+before_deploy:
+  - ember test -s -f 'Acceptance |'
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ember deploy testing --verbose
+  on:
+    branch: deployment
