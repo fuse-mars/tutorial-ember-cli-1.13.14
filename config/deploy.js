@@ -4,9 +4,9 @@ module.exports = function(deployTarget) {
   var ENV = {
     build: {},
     git: {
-      repo: 'git@github.com:fuse-mars/tutorial-ember-cli-1.13.14.git',
+      repo: 'https://github.com/fuse-mars/tutorial-ember-cli-1.13.14.git',
       branch: 'deployment',
-      worktreePath: '/tmp/deploy-dist'
+      worktreePath: 'deployment-automation'
     }
   };
 
