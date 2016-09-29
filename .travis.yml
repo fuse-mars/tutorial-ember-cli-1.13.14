@@ -10,6 +10,7 @@ notifications:
     on_success: change # only if status change from fail to success
     on_failure: always # if there is a fail
     recipients:
+      - nmarcellin2@gmail.com
       - mars@fusemachines.com
     template:
       - COMPLETELY STATCK AND THEREFORE USELESS MESSAGE
