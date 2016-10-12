@@ -13,13 +13,21 @@
     <link rel="stylesheet" href="assets/app-test.css">
 
     {{content-for 'head-footer'}}
-
   </head>
   <body>
     {{content-for 'body'}}
 
     <script src="assets/vendor.js"></script>
     <script src="assets/app-test.js"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-68265226-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
 
     {{content-for 'body-footer'}}
   </body>

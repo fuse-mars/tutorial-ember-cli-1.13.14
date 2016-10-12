@@ -1,3 +1,4 @@
+/* globals Mirage */
 export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -9,7 +10,7 @@ export default function() {
   */
 
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
-  // this.namespace = '';    // make this `api`, for example, if your API is namespaced
+  this.namespace = 'api/v1';    // make this `api`, for example, if your API is namespaced
   // this.timing = 400;      // delay for each request, automatically set to 0 during testing
 
   /*
@@ -25,12 +26,19 @@ export default function() {
   */
 
   // when front-end provides valid token
-  this.get('users', (schema, request) => {
+  this.get('users', (/* schema, request */) => {
     return { users: [{ id: 1, name: 'user 1' }, { id: 2, name: 'user 2' }] };
   });
 
   // when front-end provides invalid token
-  this.get('users', () => new Mirage.Response(401, { 'content-type': 'application/json' }, {error: "invalid_token", error_description: "Invalid access token: 80216087-5c02-48b2-90bc-5a8901340ffb"})
+  this.get('users', 
+    () => new Mirage.Response(401, { 'content-type': 'application/json' }, {error: "invalid_token", error_description: "Invalid access token: 80216087-5c02-48b2-90bc-5a8901340ffb"})
   );
 
+
+  this.passthrough('https://mister-trainer.appspot.com/**'); // serving knowledge route
+  // api => <host>/api/v1/ask-question?q=<question>
+  this.get('ask-question', (schema, request) => {
+    return { question: request.queryParams.q, answer: `${request.queryParams.q} is who he/she is!`};
+  });
 }

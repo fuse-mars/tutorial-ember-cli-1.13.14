@@ -3,7 +3,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'app-test',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/tutorial-ember-cli-1.13.14/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -51,3 +51,4 @@ module.exports = function(environment) {
 
   return ENV;
 };
+

@@ -1,0 +1,20 @@
+<div class="full-name">
+	Who is
+	{{input type="text" name="full-name" value=searchKeyword insert-newline='searchPerson'}}
+	<button class="info-icon" 
+		{{action 'searchPerson' searchKeyword on='click'}}
+	>go</button>
+	<button class="info-icon" 
+		{{action 'toggleMessage' 'OPEN' on='mouseEnter'}}
+		{{action 'toggleMessage' 'CLOSE' on='mouseLeave'}}
+	>?</button>
+	{{#if showMessage}}
+		<span class="popover-content">
+			Enter a partial or complete name
+		</span>
+	{{/if}}
+</div>
+<div class="search-result">
+<div class="real-name"><strong>{{searchResult.question}}</strong></div>
+<div class="definition">{{searchResult.answer}}</div>
+</div>

@@ -12,8 +12,6 @@ notifications:
     recipients:
       - nmarcellin2@gmail.com
       - mars@fusemachines.com
-    template:
-      - COMPLETELY STATCK AND THEREFORE USELESS MESSAGE
 
 cache:
   directories:
@@ -33,10 +31,15 @@ script:
   - ember test
 
 before_deploy:
-  - ember test -f 'Acceptance |'
+  - ember test -f "Acceptance |"
+  - cp -rf .deployment/production/config/environment.js app/config/
+  - cp -rf .deployment/production/index.html app/
+  # append content of ".deployment/production/router.js" to "app/router.js"
+  - cat app/router.js > app/router.tmp.js # For Ember apps
+  - cat app/router.tmp.js .deployment/production/router.js > app/router.js # For Ember apps
 deploy:
   skip_cleanup: true
   provider: script
   script: ember deploy testing --verbose
   on:
-    branch: deployment
+    branch: production

@@ -1,5 +1,5 @@
 <div class="full-name">
-	Name
+	<input type="text" name="full-name" placeholder="Name">
 	<button class="info-icon" 
 		{{action 'toggleMessage' 'OPEN' on='mouseEnter'}}
 		{{action 'toggleMessage' 'CLOSE' on='mouseLeave'}}
@@ -9,7 +9,5 @@
 			Enter a partial or complete name
 		</span>
 	{{/if}}
-	<br>
-	<br>
-	<input type="text" name="full-name">
+	
 </div>
