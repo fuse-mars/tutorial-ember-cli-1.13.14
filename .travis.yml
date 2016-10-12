@@ -36,7 +36,7 @@ script:
 
 before_deploy:
   - ember test -f "Acceptance |"
-  - cp -rf .deployment/production/config/environment.js app/config/
+  - cp -rf .deployment/production/config/environment.js config/
   - cp -rf .deployment/production/index.html app/
   # append content of ".deployment/production/router.js" to "app/router.js"
   - cat app/router.js > app/router.tmp.js # For Ember apps
