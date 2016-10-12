@@ -53,6 +53,15 @@ define('app-test/tests/app.jshint', ['exports'], function (exports) {
     assert.ok(true, 'app.js should pass jshint.');
   });
 });
+define('app-test/tests/application/adapter.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - application/adapter.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'application/adapter.js should pass jshint.');
+  });
+});
 define('app-test/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = destroyApp;
 
@@ -148,6 +157,24 @@ define('app-test/tests/helpers/start-app.jshint', ['exports'], function (exports
     assert.ok(true, 'helpers/start-app.js should pass jshint.');
   });
 });
+define('app-test/tests/knowledge/whatis/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - knowledge/whatis/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'knowledge/whatis/route.js should pass jshint.');
+  });
+});
+define('app-test/tests/knowledge/whois/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - knowledge/whois/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'knowledge/whois/route.js should pass jshint.');
+  });
+});
 define('app-test/tests/router.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -155,6 +182,15 @@ define('app-test/tests/router.jshint', ['exports'], function (exports) {
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'router.js should pass jshint.');
+  });
+});
+define('app-test/tests/router.tmp.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - router.tmp.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'router.tmp.js should pass jshint.');
   });
 });
 define('app-test/tests/routes/search.jshint', ['exports'], function (exports) {
@@ -179,6 +215,70 @@ define('app-test/tests/test-helper.jshint', ['exports'], function (exports) {
     assert.ok(true, 'test-helper.js should pass jshint.');
   });
 });
+define('app-test/tests/unit/application/adapter-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('adapter:application', 'Unit | Adapter | application', {
+    // Specify the other units that are required for this test.
+    // needs: ['serializer:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var adapter = this.subject();
+    assert.ok(adapter);
+  });
+});
+define('app-test/tests/unit/application/adapter-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/application/adapter-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/application/adapter-test.js should pass jshint.');
+  });
+});
+define('app-test/tests/unit/knowledge/whatis/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:knowledge/whatis', 'Unit | Route | knowledge/whatis', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app-test/tests/unit/knowledge/whatis/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/knowledge/whatis/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/knowledge/whatis/route-test.js should pass jshint.');
+  });
+});
+define('app-test/tests/unit/knowledge/whois/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:knowledge/whois', 'Unit | Route | knowledge/whois', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app-test/tests/unit/knowledge/whois/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/knowledge/whois/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/knowledge/whois/route-test.js should pass jshint.');
+  });
+});
 define('app-test/tests/unit/routes/search-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('route:search', 'Unit | Route | search', {
@@ -198,6 +298,66 @@ define('app-test/tests/unit/routes/search-test.jshint', ['exports'], function (e
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/search-test.js should pass jshint.');
+  });
+});
+define('app-test/tests/unit/user-list/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:user-list', 'Unit | Route | user list', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app-test/tests/unit/user-list/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/user-list/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/user-list/route-test.js should pass jshint.');
+  });
+});
+define('app-test/tests/unit/user-updates/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:user-updates', 'Unit | Route | user updates', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app-test/tests/unit/user-updates/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/user-updates/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/user-updates/route-test.js should pass jshint.');
+  });
+});
+define('app-test/tests/user-list/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - user-list/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'user-list/route.js should pass jshint.');
+  });
+});
+define('app-test/tests/user-updates/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - user-updates/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'user-updates/route.js should pass jshint.');
   });
 });
 /* jshint ignore:start */
